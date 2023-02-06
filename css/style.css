@@ -11,6 +11,7 @@
     --btn-bg-color: #F4F4FD;
     --bg-color-section: #F4F4FD; 
     --bg-zagolowok: #2E2F42;
+    --border-color: #E7E9FC;
 }
 /* ============body */
 body {
@@ -47,7 +48,6 @@ p {
 /* ====================HEADER */
 .header {
     background: var(--primary-bg-color);
-    max-width: 1158px;
     padding-top: 24px;
     padding-bottom: 24px;
     border-bottom: 1px solid #E7E9FC;
@@ -70,19 +70,17 @@ p {
 .container {
     /* outline: 2px tomato solid; */
     max-width: 100%;
-    max-width: 1158px;
+    width: 1158px;
     padding-right: 15px;
     padding-left: 15px;
-    
+    margin-right: auto;
+    margin-left: auto;
 }
 /* ==========================H1 */
-.container-main-title {
+.container .main-title {
     width: 496px;
     margin-right: auto;
     margin-left: auto;
-    padding-top: 188px;
-    padding-bottom: 188px;
-    align-items: center;
 }
 .main-title {
 text-align: center;
@@ -124,8 +122,7 @@ color: var(--title-text-color);
 color: var(--btn-color);
 }
 .header-nav .current {
-    background-color: var(--btn-color);
-    color: var(--btn-text-secondary-color);
+    color: var(--btn-color);
 }
 /* =====================adres */
 .address-link {
@@ -139,40 +136,48 @@ color: var(--text-color);
 color: var(--btn-color); 
 }
 /* ==============ZAGOLOWOK  stuidio*/
-.zagolowok {
+.hero-studio {
     background-color: var(--bg-zagolowok); 
-    max-width: 1158px;
+    padding-top: 188px;
+    padding-bottom: 188px;
 }
 /* ===================knopki spisok portfolio */
+.hero-btn-portfolio {
+    padding-top: 96px;  
+    padding-bottom: 72px;
+}
+
 .hero-btn-list {
     display: flex;
     gap: 24px;
     justify-content: center;
 }
-.hero-btn-list .hero-btn-item {
-    padding-top: 96px;
-}
+
 /* ===================PORTFOLIO KARTINKI  */
-.hero-portfolio .container {
-    padding-top: 70px;
-}
 .hero-portfolio-list {
     display: flex;
     flex-wrap: wrap;
-    margin-left: -24px;
-    margin-top: -48px;
     padding-bottom: 120px;
+    gap: 48px 24px;
 }
+
 .hero-portfolio-list .hero-item {
     flex-basis: calc(100% / 3 - 24px);
-    border: 1px solid #E7E9FC;
-    margin-left: 24px;
-    margin-top: 48px;
 }
 .portfolio-text-wrap {
 padding-top: 32px;
 padding-bottom: 32px;
 padding-left: 16px;
+/* border: 1px solid #d01319;  */
+border-left: 1px solid var(--border-color);
+border-right: 1px solid var(--border-color);
+border-bottom: 1px solid var(--border-color);
+}
+
+.hero-portfolio-description {
+font-weight: 500;
+font-size: 20px;
+line-height: 1.2;
 }
 
 /* =================knopki design*/
@@ -185,18 +190,19 @@ padding-left: 16px;
     display: block;
 
 font-family: 'Roboto', sans-serif;
-    font-weight: 500;
-    font-size: 16px;
-    box-shadow: 0px 4px 4px rgb(0 0 0 / 15%);
+font-weight: 500;
+font-size: 16px;
+box-shadow: 0px 4px 4px rgb(0 0 0 / 15%);
 
-color: var(--btn-color);
-background: var(--btn-bg-color);
+color: var(--btn-text-secondary-color);
+background: var(--btn-color);
 cursor: pointer;
+border: none;
 }
 .hero-btn-order:hover,
 .hero-btn-order:focus {
-background: var(--btn-color);
-color: var(--btn-text-secondary-color);
+/* background-color: var(--btn-bg-color);
+color: var(--btn-text-color); */
 }
 
 .hero-btn {
@@ -222,6 +228,11 @@ background: var(--btn-color);
 color: var(--btn-text-secondary-color);
 }
 /* ================text studio */
+.features {
+    padding-top: 120px;
+    padding-bottom: 120px;
+    background-color: var(--primary-bg-color);
+}
 
 .hero-text .hero-list {
     display: flex;
@@ -232,11 +243,6 @@ color: var(--btn-text-secondary-color);
     width: 264px;
 }
 
-.hero-title-description {
-    padding-top: 120px;
-    width: 264px;
-
-}
 .hero-item-text {
     margin-top: 8px;
 }
@@ -256,21 +262,24 @@ line-height: 1.2;
 color: var(--title-text-color);
 }
 /* =================WHAT WE ARE DOING */
-.gallery-action .gallery-team {
-padding-top: 120px;
-}
+.gallery-action {
+    padding-bottom: 120px;
+} 
+
 .gallery-pics-list {
 display: flex;
 margin-top: 72px;
-padding-bottom: 120px;
 gap: 24px;
 }
 .gallery-pics-item {    
     width: calc((100% - 48px) / 3)
 }
+
 /* ===============OUR TEAM  */
-.gallery .gallery-team {
-padding-top: 120px;
+.gallery {
+    background-color:var(--bg-color-section);
+    padding-top: 120px;
+    padding-bottom: 120px;
 }
 
 .gallery .hero-list-team {
@@ -294,12 +303,8 @@ text-align: center
     background: var(--bg-color-image);
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
     border-radius: 0px 0px 4px 4px;
-    margin-bottom: 120px;
 }
 
-.gallery {
-    background-color:var(--bg-color-section);
-}
 /* ================KARTINKI */
 .hero-title {
 position: absolute;
@@ -330,8 +335,6 @@ color: var(--text-color);
 /* ===================foooooooter */
 .footer {
     background-color: var(--bg-zagolowok);
-    max-width: 1158px;
-
 }
 .footer .container {
     padding-top: 100px;
