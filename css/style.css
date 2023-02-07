@@ -142,22 +142,23 @@ color: var(--btn-color);
     padding-bottom: 188px;
 }
 /* ===================knopki spisok portfolio */
-.hero-btn-portfolio {
-    padding-top: 96px;  
-    padding-bottom: 72px;
+
+.hero-portfolio {
+    padding-top: 96px;
+    padding-bottom: 120px;
 }
 
 .hero-btn-list {
     display: flex;
     gap: 24px;
     justify-content: center;
+    margin-bottom: 72px;
 }
 
 /* ===================PORTFOLIO KARTINKI  */
 .hero-portfolio-list {
     display: flex;
     flex-wrap: wrap;
-    padding-bottom: 120px;
     gap: 48px 24px;
 }
 
